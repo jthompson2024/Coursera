@@ -1,82 +1,88 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Module 2 Assignment</title>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Module 2 Assignment</title>
 <style>
 
 /********** Base styles **********/
-
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 body {
-  background-color: mintcream;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: mintcream;
 }
 
-
-div#container {
-/*  background-color: orange;*/
-  width: 100%;
-  
-}
-
-div.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-p{
-  padding: 35px;
-  margin: 25px;
-  border: 1px solid black;
-  height: 150px;
-  width: 300px;
-  position:relative;
-  float: left;
-  margin-left: 10px;
-}
-
-#p1{
-  background-color: #fdffb6;
-}
-
-#p2{
-  background-color: #caffbf;
-}
-
-#p3 {
-  background-color: #9bf6ff;
+.container {
+    position: relative;
+    margin: 1px;
 }
 
 h1 {
   margin-bottom: 15px;
-  font-size: 1.75em;
+  font-size: 190%;
   text-align: center;
   background-color: #a0c4ff;
   color: black;
   padding: 20px 0;
 }
 
+.row {
+    width: 100%;
+}
+
+.section {
+    position: relative;
+    overflow: hidden;
+    margin: 8px;
+    padding: 16px;
+    border: 1px black solid;
+}
+
 /* Section title styles */
 .section-title {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100px;
-  text-align: center;
-  background-color: #ffc6ff;
-  padding: 5px 10px;
-  border: 1px solid black;
-  color: #000; /* Change text color for readability */
+    font-size: 135%;
+    position: absolute;
+    float: right;
+    top: 0;
+    right: 0;
+    border-left: 1px black solid;
+    border-bottom: 1px black solid;
+    padding: 5px 25px;
 }
+
+.section p {
+    padding-top: 30px;
+    text-align: justify;
+}
+
+#p1 {
+    background-color: #fdffb6;
+}
+
+#p2 {
+    background-color: #caffbf;
+}
+
+#p3 {
+    background-color: #9bf6ff;
+}
+
+#name-chicken {
+    background-color: #ffc6ff;
+}
+
+#name-beef {
+    background-color: #ffc6ff;
+}
+
+#name-sushi {
+    background-color: #ffc6ff;
+}
+
 
 /* Simple Responsive Framework. */
 .row {
@@ -84,50 +90,78 @@ h1 {
 }
 
 /********** Large devices only **********/
-@media (min-width: 1200px) {
-  .row > p {
-    width: 33.33%;
-  }
+@media (min-width: 992px) {
+    .col-lg-4 {
+        float: left;
+        width: 33.3%;
+    }
 }
 
 /********** Medium devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
-  .row > p {
-    width: 49%; /* 2 columns */
-  }
-  #p3 {
-    width: 100%; /* Full width for the third section */
-  }
+    .col-md-6 {
+        width: 50%;
+        float: left;
+        display: block;
+    }
+    .col-md-12 {
+        width: 100%;
+        float: left;
+        display: block;
+    }
 }
 
 /********** Small devices only **********/
 @media (max-width: 767px) {
-  .row > p {
-    width: 100%; /* Full width for all sections */
-  }
+    .col-sm-12 {
+        width: 100%;
+        float: left;
+        display: block;
+    }
 }
-
 </style>
-
 </head>
+
 <body>
-<h1>Our Menu</h1>
+    <div class="container">
+     <h1>Our Menu</h1>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="section" id="p1">
+                <div class="section-title" id="name-chicken">Chicken</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, dolor et aliquam imperdiet,
+                    orci
+                    turpis porttitor massa, sed tincidunt neque mi non enim. Mauris imperdiet eu tortor vitae accumsan.
+                    Integer tempor pellentesque turpis vestibulum consequat. Vivamus sit amet quam id eros pretium
+                    condimentum. Sed nisi est, fermentum ac augue ac, congue euismod risus.
+                </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="section" id="p2">
+                <div class="section-title" id="name-beef">Beef</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, dolor et aliquam imperdiet,
+                    orci
+                    turpis porttitor massa, sed tincidunt neque mi non enim. Mauris imperdiet eu tortor vitae accumsan.
+                    Integer tempor pellentesque turpis vestibulum consequat. Vivamus sit amet quam id eros pretium
+                    condimentum. Sed nisi est, fermentum ac augue ac, congue euismod risus.
+                </p>
+            </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="section" id="p3">
+                <div class="section-title" id="name-sushi">Sushi</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, dolor et aliquam imperdiet,
+                    orci
+                    turpis porttitor massa, sed tincidunt neque mi non enim. Mauris imperdiet eu tortor vitae accumsan.
+                    Integer tempor pellentesque turpis vestibulum consequat. Vivamus sit amet quam id eros pretium
+                    condimentum. Sed nisi est, fermentum ac augue ac, congue euismod risus.
+                </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
-  <div id="container" class="row">
-    <div class="col-xs-12 col-md-12 col-lg-6">
-
-  <p id="p1" class="section">
-    <span class="section-title">Chicken</span>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis dapibus odio, quis accumsan massa. Nullam facilisis laoreet metus a feugiat.
-  </p>
-  <p id="p2" class="section">
-    <span class="section-title">Beef</span>
- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis dapibus odio, quis accumsan massa. Nullam facilisis laoreet metus a feugiat.  </p>
-  <p id="p3" class="section">
-    <span class="section-title">Sushi</span>
- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis dapibus odio, quis accumsan massa. Nullam facilisis laoreet metus a feugiat.  </p>
-</div>
-</div>
-</body>
-</html>
+</body></html>
